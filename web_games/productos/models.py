@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Producto(models.Model):
+    """Modelo de Producto"""
     titulo = models.CharField(max_length=50, verbose_name="Titulo del Producto")
     descripcion = models.TextField(verbose_name="Detalle del Producto")
     imagen = models.URLField(max_length=200, verbose_name="Url de la imagen")
