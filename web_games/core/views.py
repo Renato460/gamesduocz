@@ -1,7 +1,8 @@
 from django.shortcuts import render, HttpResponse
-
+from productos.models import Producto
 # Create your views here.
 def home(request):
-    return render(request, "index.html", {"titulo":"holi"})
+    productos = Producto.objects.filter(estaEnOferta=True)
+    return render(request, "index.html", {"titulo":"holi",'productos':productos})
 def contacto(request):
     return render(request,"contacto.html")
