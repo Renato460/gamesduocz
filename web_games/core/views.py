@@ -4,5 +4,4 @@ from productos.models import Producto
 def home(request):
     productos = Producto.objects.filter(estaEnOferta=True)
     return render(request, "index.html", {"titulo":"holi",'productos':productos})
-def contacto(request):
-    return render(request,"contacto.html")
+
